@@ -18,11 +18,13 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "~8.0.0-beta.7",
+    "@angular/cdk": "~7.3.3",
     "@angular/common": "~8.0.0-beta.7",
     "@angular/compiler": "~8.0.0-beta.7",
     "@angular/core": "~8.0.0-beta.7",
     "@angular/forms": "~8.0.0-beta.7",
     "@angular/http": "~8.0.0-beta.7",
+    "@angular/material": "~7.3.3",
     "@angular/platform-browser": "~8.0.0-beta.7",
     "@angular/platform-browser-dynamic": "~8.0.0-beta.7",
     "@angular/platform-server": "~8.0.0-beta.7",
@@ -45,6 +47,7 @@
     "@types/node": "~11.11.00",
     "@types/webpack-env": "~1.13.9",
     "codelyzer": "~4.5.0",
+    "hammerjs": "^2.0.8",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~4.0.1",
@@ -56,6 +59,7 @@
     "ts-node": "^8.0.3",
     "tslint": "^5.13.1",
     "typescript": "~3.2.4",
-    "udk": "^1.0.3"
+    "udk": "^1.0.3",
+    "web-animations-js": "^2.3.1"
   }
 }
