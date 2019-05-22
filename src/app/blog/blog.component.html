@@ -1,0 +1,47 @@
+<section id="blog_sec" class="blog-sec mt-180 mt-sm-120">
+  <h2 class="mb-30 font-white">blog</h2>
+  <div class="row">
+    <div *ngFor="let post of posts; let odd=odd" >
+    <div class="col-sm-6 mb-30" >
+      <div class="mdl-card mdl-shadow--2dp pa-0">
+        <div class="mdl-card__title pa-0">
+          <img class="blog-img" src="{{post.images && post.images[0].url}}"/>
+        </div>
+        <div class="mdl-card__supporting-text relative">
+          <span class="blog-cat">{{post.labels.join(', ')}}</span>
+          <a [routerLink]="['/'+ getRoute(post)]">
+            <h4 class="mt-15 mb-20">{{post.title}}</h4>
+          </a>
+          <!--<p>{{Description}}</p>-->
+          <a href="audio-blog-post.html" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect bg-red mdl-shadow--8dp">
+            <i class="zmdi zmdi-audio"></i>
+          </a>
+        </div>
+        <div class="mdl-card__actions mdl-card--border">
+          <span class="blog-post-date inline-block">{{ post.published | date: 'dd/MM/yyyy HH:mm'}}</span>
+          <div class="mdl-layout-spacer"></div>
+          <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect mr-5">
+            <i class="zmdi zmdi-favorite"></i>
+          </button>
+          <button id ="share_menu_5" class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+            <i class="zmdi zmdi-share"></i>
+          </button>
+          <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+              data-mdl-for="share_menu_5">
+            <li class="mdl-menu__item">Facebook</li>
+            <li class="mdl-menu__item">Twitter</li>
+            <li class="mdl-menu__item">LinkedIn</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="clearfix" *ngIf="odd"></div>
+    </div>
+  </div>
+
+  <div class="navigation-block mb-30">
+    <!--<a href="#" class="inline-block pull-left prev"><i class="zmdi zmdi-arrow-left font-blue"></i></a>-->
+    <a *ngIf="nextPageToken && nextPageToken.length" href="#" class="inline-block pull-right next"><i class="zmdi zmdi-arrow-right font-blue"></i></a>
+    <div class="clearfix"></div>
+  </div>
+</section>

@@ -1,0 +1,105 @@
+<!--Blog Sec-->
+<section id="blog_sec" class="blog-sec mt-180 mt-sm-120">
+  <div class="row">
+    <div class="col-sm-12 mb-30" *ngIf="post">
+      <div class="mdl-card mdl-shadow--2dp pa-0">
+        <div class="mdl-card__title pa-0">
+          <img class="main-blogpost-img blog-img" src="{{post.images && post.images[0].url}}"/>
+        </div>
+        <div class="mdl-card__supporting-text relative">
+          <div class="text-center">
+            <span class="blog-cat mt-20">{{post.labels.join(', ')}}</span>
+            <h2 class="mt-10">{{ post.title }}</h2>
+            <span class="blog-post-date inline-block mt-10">{{ post.published | date: 'dd/MM/yyyy HH:mm'}}</span>
+            <div class="blog-post-info mt-10">
+              <a href="" class="pr-10"><i class="zmdi zmdi-account pr-5"></i>by {{ post.author.displayName }}</a>
+              <a href=""><i class="zmdi zmdi-comments pr-10"></i>{{post.replies.totalItems}}</a>
+            </div>
+          </div>
+          <p [innerHTML]="post.content" style="padding: 20px"></p>
+          <div class="text-right mt-30">
+            <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect mr-5">
+              <i class="zmdi zmdi-favorite font-grey"></i>
+            </button>
+            <button id ="share_menu_2" class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+              <i class="zmdi zmdi-share font-grey"></i>
+            </button>
+            <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+                data-mdl-for="share_menu_2">
+              <li class="mdl-menu__item">Facebook</li>
+              <li class="mdl-menu__item">Twitter</li>
+              <li class="mdl-menu__item">LinkedIn</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--/Blog Sec-->
+
+<!--Related Post Sec-->
+<section class="blog-sec sec-pad-top-sm">
+  <h2 class="mb-30">related post</h2>
+  <div class="row">
+    <div class="col-sm-4 mb-30">
+      <div class="mdl-card mdl-shadow--2dp pa-0">
+        <div class="mdl-card__title pa-0">
+          <div class="blog-img blog-1"></div>
+        </div>
+        <div class="mdl-card__supporting-text relative">
+          <span class="blog-cat">Travel</span>
+          <h4 class="mt-15 mb-20">Fly High With Youtube</h4>
+          <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect bg-red mdl-shadow--8dp">
+            <i class="zmdi zmdi-youtube-play"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 mb-30">
+      <div class="mdl-card mdl-shadow--2dp pa-0">
+        <div class="mdl-card__title pa-0">
+          <div class="blog-img blog-2"></div>
+        </div>
+        <div class="mdl-card__supporting-text relative">
+          <span class="blog-cat">Photography</span>
+          <h4 class="mt-15 mb-20">Iceland Live In Images</h4>
+          <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect bg-blue mdl-shadow--8dp">
+            <i class="zmdi zmdi-image-o"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 mb-30">
+      <div class="mdl-card mdl-shadow--2dp pa-0">
+        <div class="mdl-card__title pa-0">
+          <div class="blog-img blog-3"></div>
+        </div>
+        <div class="mdl-card__supporting-text relative">
+          <span class="blog-cat">Science</span>
+          <h4 class="mt-15 mb-20">Grand Canyon Mysteries</h4>
+          <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect bg-green mdl-shadow--8dp">
+            <i class="zmdi zmdi-collection-image-o"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--/Related Post Sec-->
+
+<!--Navigation Sec-->
+<div class="navigation-block priview-text mb-30">
+  <div class="mdl-card mdl-shadow--2dp bg-blue pa-30">
+    <a href="audio-blog-post.html" class="inline-block pull-left prev">
+      <i class="zmdi zmdi-arrow-left font-white"></i>
+      <span class="font-white inline-block pl-30">Try to be easy with Life</span>
+    </a>
+    <a href="gallery-blog-post.html" class="inline-block pull-right next">
+      <span class="font-white inline-block pr-30">Landed nowhere</span>
+      <i class="zmdi zmdi-arrow-right font-white"></i>
+    </a>
+    <div class="clearfix"></div>
+  </div>
+</div>
+<!--/Navigation Sec-->
